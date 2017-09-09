@@ -23,6 +23,7 @@ h1 {
 
 h2{
 	color: #4aaaa5;
+	font-weight: bold;
 }
 
 header {
@@ -109,13 +110,18 @@ nav li a {
 	vertical-align: top;
 }
 
+.main p{
+	margin-bottom: 10px;
+}
+
 .about-img {
 	float: left;
+	margin-right: 10px;
 }
 
 .portfolio img {
-	height: 150px;
-	width: 200px;
+	height: 180px;
+	width: 250px;
 	display: block;
 	position: relative;
 	z-index: 1;
@@ -124,7 +130,7 @@ nav li a {
 .portfolio-full{
 	position: relative;
 	margin-bottom: 20px;
-	width: 200px;
+	width: 250px;
 	background-color: red;
 }
 
@@ -134,12 +140,12 @@ nav li a {
 	font-weight: bold;
 	background-color: #4aaaa5;
 	height: 30px;
-	width: 200px;
+	width: 250px;
 	text-align: center;
 	vertical-align: center;
 	line-height: 30px;
 	position: absolute;
-	top: 105px;
+	top: 125px;
 	z-index: 2;
 }
 
