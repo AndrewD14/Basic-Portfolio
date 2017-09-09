@@ -1,13 +1,19 @@
 .wrapper {
-	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	width: 100%;
-	color: #777777;
 	min-height: calc(100vh - 90px - 92px);
 	background: url("../images/diamond_upholstery.png") repeat;	
 }
 
-html, body {
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+body {
 	height: 100%;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777777;
 }
 
 h1 {
@@ -15,7 +21,7 @@ h1 {
 	color: white;
 }
 
-h2, h3 {
+h2{
 	color: #4aaaa5;
 }
 
@@ -52,13 +58,13 @@ nav {
 }
 
 nav ul {
-	margin:0;
-    padding:0;
+	margin: 0;
+    padding: 0;
 	display: inline-block;
 	list-style: none;
     vertical-align: center;
-    display: inline-block;
     line-height: 1em;
+    border-width: 0px;
 }
 
 nav li {
@@ -93,6 +99,8 @@ nav li a {
 	width: 559px;
 	padding-left: 30px;
 	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	background-color: #ffffff;
 	border-color: #dddddd;
 	border-style: solid;
@@ -101,12 +109,46 @@ nav li a {
 	vertical-align: top;
 }
 
-.main img {
+.about-img {
 	float: left;
 }
 
-.main p{
+.portfolio img {
+	height: 150px;
+	width: 200px;
 	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.portfolio-full{
+	position: relative;
+	margin-bottom: 20px;
+	width: 200px;
+	background-color: red;
+}
+
+.portfolio-label {
+	float: left;
+	color: white;
+	font-weight: bold;
+	background-color: #4aaaa5;
+	height: 30px;
+	width: 200px;
+	text-align: center;
+	vertical-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 105px;
+	z-index: 2;
+}
+
+.portfolio .portfolio-full:nth-child(even) {
+	float: right;
+}
+
+.portfolio .portfolio-full:nth-child(odd) {
+	float: left;
 }
 
 .connect {
@@ -114,6 +156,8 @@ nav li a {
 	width: 209px;
 	padding-left: 30px;
 	padding-right:30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	float: right;
 	background-color: #ffffff;
 	border-color: #dddddd;
@@ -138,6 +182,7 @@ nav li a {
 	border-width: 1px;
 	border-style: solid;
 	border-color: black;
+	border-radius: 12px;
 }
 
 .connect img {
@@ -145,6 +190,54 @@ nav li a {
 	width: 50px;
 }
 
+form input{
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+.menuBtn{
+    width: 350px;
+	height: 30px;
+	margin: 10px 0;
+}
+
+.menuBtn button:active,
+.menuBtn button.active,
+.menuBtn button:focus {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.menuBtn button{
+    text-align: center;
+    color:white;
+    border: 3.0px solid;
+    border-color: #0059b3;
+    font-size:15px;
+    font-weight:bold;
+    font-family: PeriodicoDisplay-Rg, Georgia;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 8px;
+    text-decoration: none !important;
+    background-image: linear-gradient(to right, #2f6a67 50%, #4aaaa5 50%);
+    background-position: 0% 0;
+    background-size: 205% auto;
+    transition: background-position 0.2s ease-out;
+}
+
+.menuBtn button:hover{   
+    text-decoration: none !important;
+    background-position: -97% 0;
+}
+
+.menuBtn button::text{
+    text-decoration: none !important;
+}
 
 footer {
 	background-color: #666666;
